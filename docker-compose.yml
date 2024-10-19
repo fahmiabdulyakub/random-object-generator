@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./random_objects.txt:/usr/src/app/random_objects.txt
+    command: ["node", "dist/challengeB.js"]
+    container_name: challenge_b_container
